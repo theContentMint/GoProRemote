@@ -30,7 +30,7 @@ class gopro:
         Optional:
             all default reply and stated values.
     """
-    def __init__(self, filename='record_times.csv', image=os.path.join(curdir,'v-white.jpg'), 
+    def __init__(self, filename='record_times.csv', image='v-white.jpg', 
                 CM=[0,1], OO=[0], wt=[0], se=[0 for i in range(31)],
                 cv=[1], pw=[0,1], st=[0,0,0,0,0], SH=[0,0]):
         self.values = {
