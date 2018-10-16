@@ -14,11 +14,11 @@ In "Wifi RC" mode the Wifi remote becomes the wifi host and the GoPro becomes th
 
 To connect to the remote, let the Wifi Remote look for cameras by holding the top button and pressing the bottom one. You should see a camera with arrows underneath. While the remote is in this state it broadcasts its wifi network. Connect to this network from your computer. Then start the gopro class. (If the remote is not looking for a camera it does not broadcast the network. You will have to be able to connect to a hidden wifi network.) 
 
-At the moment it only simulates a GoPro listening to commands from the remote, and responds like a GoPro would. When a "start recording" command (SH) is recieved the time is saved in `self.start_time`. When a "stop recording" command is recieved the time is saved in `self.stop_time` and the double is written to a line in the csv file defined in `self.filename`.
+At the moment it only simulates a GoPro listening to commands from the remote, and responds like a GoPro would. When a "start recording" command (SH) is received the time is saved in `self.start_time`. When a "stop recording" command is received the time is saved in `self.stop_time` and the double is written to a line in the csv file defined in `self.filename`.
 
 If the computer is the only thing connected to the remote it will display an image sent by the computer. Thanks Michael for providing a suitable image.
 
-This example starts a thread which listens to start and stop recoding commands and records them to a csv file.
+This example starts a thread which listens to start and stop recording commands and records them to a csv file.
 
     import gopro
     import time
@@ -33,7 +33,7 @@ This was used in the Bridgestone Bikebooth project. (Link to follow soon)
 Next Steps
 ----------
 
-A next step would be to simulate the wifi remote to control the GoPros from a computer. This would alow a computer to send simultanious commands to many GoPros. The limitations of this method is that it is not possible to create live stream from the GoPros or change the settings of the gopros as far as I am aware.
+A next step would be to simulate the wifi remote to control the GoPros from a computer. This would allow a computer to send simultaneous commands to many GoPros. The limitations of this method is that it is not possible to create live stream from the GoPros or change the settings of the GoPros as far as I am aware.
 
 The class should be expanded to make it more modular.
 
@@ -50,5 +50,5 @@ Where XX are ASCII characters. The ASCII characters explain what the command is 
 How to Help
 -----------
 
-Connect to a remote's network. Connect a GoPro to the networks as well. Open wireshark (or tcp dump) to listen to the trafic. Descyfer the commands and responces. As well as the changes in the state response. 
+Connect to a remote's network. Connect a GoPro to the networks as well. Open wireshark (or tcp dump) to listen to the traffic. Descyfer the commands and responses. As well as the changes in the state response. 
 
